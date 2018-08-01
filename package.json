@@ -13,9 +13,9 @@
     "start": "npm run build && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build-css && npm run build-html && npm run build-imgs",
-    "build-css": "mkdir -p ./public && node-sass ./scss          -o ./public",
-    "build-html": "mkdir -p ./public && pug       ./pug_templates -o ./public",
-    "build-imgs": "mkdir -p ./public && cp        ./images/*         ./public"
+    "build-css": "mkdir -p ./deploy && node-sass ./scss          -o ./deploy",
+    "build-html": "mkdir -p ./deploy && pug       ./pug_templates -o ./deploy",
+    "build-imgs": "mkdir -p ./deploy && cp        ./images/*         ./deploy"
   },
   "author": "",
   "license": "ISC"
