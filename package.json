@@ -1,0 +1,22 @@
+{
+  "name": "betfair_widget_environments",
+  "version": "1.0.0",
+  "description": "static site to point to all available betfair widget environments.",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.7.2",
+    "pug": "^2.0.0-rc.4",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm run build && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-css && npm run build-html && npm run build-imgs",
+    "build-css": "mkdir -p ./deploy && node-sass ./scss          -o ./deploy",
+    "build-html": "mkdir -p ./deploy && pug       ./pug_templates -o ./deploy",
+    "build-imgs": "mkdir -p ./deploy && cp        ./images/*         ./deploy"
+  },
+  "author": "",
+  "license": "ISC"
+}

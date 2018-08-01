@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    title='Betfair Widgets Environments Index'
+    link(rel='stylesheet', href='main.css')
+  body
+    nav
+      .nav-wrapper
+        a.brand-logo
+          img(src='logo.png')
+    h1.center-align Betfair Widgets Environments Index
+    .row
+      .col.s10.offset-s1.m4.l4
+        a(href='https://betfair-widget-admin-prod.herokuapp.com/')
+          .card-panel.hoverable
+            h4.center-align Production
+      .col.s10.offset-s1.m4.l4
+        a(href='https://betfair-widget-admin-stg.herokuapp.com/')
+          .card-panel.hoverable
+            h4.center-align Staging
+      .col.s10.offset-s1.m4.l4
+        a(href='https://betfair-widget-admin-dev.herokuapp.com/')
+          .card-panel.hoverable
+            h4.center-align Development
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js')
