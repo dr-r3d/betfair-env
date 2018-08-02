@@ -1,7 +1,7 @@
 {
-  "name": "betfair_widget_environments",
+  "name": "peopability",
   "version": "1.0.0",
-  "description": "static site to point to all available betfair widget environments.",
+  "description": "Landing page for peopability",
   "main": "index.js",
   "dependencies": {
     "node-sass": "^4.7.2",
@@ -12,10 +12,11 @@
   "scripts": {
     "start": "npm run build && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build-css && npm run build-html && npm run build-imgs",
+    "build": "npm run build-css && npm run build-html && npm run build-imgs && npm run build-fonts",
     "build-css": "mkdir -p ./deploy && node-sass ./scss          -o ./deploy",
     "build-html": "mkdir -p ./deploy && pug       ./pug_templates -o ./deploy",
-    "build-imgs": "mkdir -p ./deploy && cp        ./images/*         ./deploy"
+    "build-imgs": "mkdir -p ./deploy && cp        ./images/*         ./deploy",
+    "build-fonts": "mkdir -p ./deploy && cp        ./fonts/*         ./deploy"
   },
   "author": "",
   "license": "ISC"
