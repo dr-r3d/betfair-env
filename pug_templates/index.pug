@@ -1,26 +1,66 @@
 doctype html
-html(lang="en")
+html(lang='en')
   head
-    title='Betfair Widgets Environments Test Index'
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Peopability
+    link(rel='shortcut icon', type='image/x-icon', href='css/images/favicon.ico')
+    link(rel='icon', type='image/png', href='css/images/favicon-32x32.png', sizes='32x32')
+    link(rel='icon', type='image/png', href='css/images/favicon-16x16.png', sizes='16x16')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i?family=Sintony:700', rel='stylesheet')
+    // Vendor Styles
+    // App Styles
     link(rel='stylesheet', href='main.css')
+    // Vendor JS
+    script(src='http://d33wubrfki0l68.cloudfront.net/js/b8bb23865e4683be364b6400966f58b378cd0f3c/js/jquery-3.1.1.min.js')
+    // App JS
+    script(src='http://d33wubrfki0l68.cloudfront.net/js/07492767f2ab9324c02a1d337a03c9a1408ec66a/js/functions.js')
   body
-    nav
-      .nav-wrapper
-        a.brand-logo
-          img(src='logo.png')
-    h1.center-align Develop your people using metrics, not guesswork
-    .row
-      .col.s10.offset-s1.m4.l4
-        a(href='https://betfair-widget-admin-prod.herokuapp.com/')
-          .card-panel.hoverable
-            h4.center-align Production
-      .col.s10.offset-s1.m4.l4
-        a(href='https://betfair-widget-admin-stg.herokuapp.com/')
-          .card-panel.hoverable
-            h4.center-align Staging
-      .col.s10.offset-s1.m4.l4
-        a(href='https://betfair-widget-admin-dev.herokuapp.com/')
-          .card-panel.hoverable
-            h4.center-align Development
-    script(src='https://code.jquery.com/jquery-3.2.1.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js')
+    .wrapper
+      header
+        a.logo(href='#')
+          i.ico-logo
+          | 						Peop
+          span ability
+      .intro
+        .intro__image.container-fullsize
+        .intro__content
+          h1.intro__title Develop your people using metrics,not guesswork
+          h3.intro__subtitle Peopability’s data driven approach to training...
+          .services
+            .service
+              .service__icon
+                i.ico-outer-green
+                  i.ico-chart
+              .service__content
+                h3.service__title Reduces
+                h4.service__subtitle Training costs
+            .service
+              .service__inner
+                .service__icon
+                  i.ico-outer-green
+                    i.ico-meter
+                .service__content
+                  h3.service__title Improves
+                  h4.service__subtitle Business Performance
+            .service
+              .service__icon
+                i.ico-outer-green
+                  i.ico-rotate
+              .service__content
+                h3.service__title Transforms
+                h4.service__subtitle Organisational Culture
+          h3.intro__subtitle
+            small …. in just a couple of minutes a day
+      .main
+        .bar.bar--dark
+          .shell-alt
+            .form.form--request
+              form(action='https://formspree.io/james@tapmint.com', method='post')
+                .form__inner
+                  .form__controls
+                    label.label.hidden(for='mail')
+                    .form__field-outer
+                      input#mail.form__field(type='email', name='email', value='', placeholder='Your Work Email Here...')
+                  button.btn.btn--large.btn-default.btn-success.form__btn(type='submit') Request a Demo
+
