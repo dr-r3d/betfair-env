@@ -10,52 +10,68 @@ html(lang='en')
     link(href='https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i?family=Sintony:700', rel='stylesheet')
     // App Styles
     link(rel='stylesheet', href='main.css')
+    link(rel='stylesheet', href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css",integrity="sha384-TXfwrfuHVznxCssTxWoPZjhcss/hp38gEOH8UPZG/JcXonvBQ6SlsIF49wUzsGno",crossorigin="anonymous")
   body
-    .wrapper
-      header
-        a.logo(href='#')
-          i.ico-logo
-          | 						Peop
-          span ability
-      .intro
-        .intro__image.container-fullsize
-        .intro__content
-          h1.intro__title Develop your people using metrics,not guesswork
-          h3.intro__subtitle Peopability’s data driven approach to training...
-          .services
-            .service
-              .service__icon
-                i.ico-outer-green
-                  i.ico-chart
-              .service__content
-                h3.service__title Reduces
-                h4.service__subtitle Training costs
-            .service
-              .service__inner
-                .service__icon
-                  i.ico-outer-green
-                    i.ico-meter
-                .service__content
-                  h3.service__title Improves
-                  h4.service__subtitle Business Performance
-            .service
-              .service__icon
-                i.ico-outer-green
-                  i.ico-rotate
-              .service__content
-                h3.service__title Transforms
-                h4.service__subtitle Organisational Culture
-          h3.intro__subtitle
-            small …. in just a couple of minutes a day
-      .main
-        .bar.bar--dark
-          .shell-alt
-            .form.form--request
-              form(action='https://formspree.io/james@tapmint.com', method='post')
-                .form__inner
-                  .form__controls
-                    label.label.hidden(for='mail')
-                    .form__field-outer
-                      input#mail.form__field(type='email', name='email', value='', placeholder='Your Work Email Here...')
-                  button.btn.btn--large.btn-default.btn-success.form__btn(type='submit') Request a Demo
-
+    .container.intro
+      .row
+        .intro-background
+        .col.s12.m6.intro-first
+          h1 Develop your people<br/>using metrics,<br/>not guesswork
+        .col.s12.m6.intro-second
+          img(src='logo.png')
+          h2.brand Peop
+            span ability
+          p enables a fast and scalable way to<br/>continuously analyse & optimise the impact<br/>of your peoples' capability on your business
+          button How it works
+    .container.value-proposition
+      .row
+        .row.header
+          .col.s12
+            p Most organisations don’t know whether employee training is having any impact on business performance.
+            p Does yours?
+            .triangle
+        .row.content
+          .col.s12
+            p.sub-header.brand
+              img(src='logo.png')
+              | &nbsp;Peop
+              span ability's
+              span &nbsp;data driven approach to training makes it easy to...
+      .container.services
+        .row
+          .col.s12.m3.service
+            .service-image
+              img.service-icon(src='logo-no-dot.png')
+              .fa-icon.capability
+                span.fa-stack.fa-2x
+                  i.far.fa-project-diagram.fa-stack-1x
+                  i.far.fa-search.fa-stack-2x
+            p.service-content Collect, Organise & Analyse capability data
+          .col.s12.m3.service
+            .service-image
+              img.service-icon(src='logo-no-dot.png')
+              .fa-icon.training
+                span.fa-stack.fa-2x
+                i.far.fa-dollar-sign.fa-stack-1x
+                i.fal.fa-long-arrow-down.fa-stack-2x
+            p.service-content Reduce training costs
+          .col.s12.m3.service
+            .service-image
+              img.service-icon(src='logo-no-dot.png')
+              .fa-icon.performance
+                i.fas.fa-chart-line.fa-2x
+            p.service-content Improve business performance
+          .col.s12.m3.service
+            .service-image
+              img.service-icon(src='logo-no-dot.png')
+              .fa-icon.culture
+                i.fal.fa-frown.fa-2x
+                i.fal.fa-long-arrow-right.fa-2x
+                i.fal.fa-laugh-beam.fa-2x
+            p.service-content Transform organisational culture
+      .row.footer
+        .col.s12.m2
+        .col.s12.m8
+          p ...in just a couple of minutes a day...
+        .col.s12.m2
+          button Learn more
