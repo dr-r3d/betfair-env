@@ -6,13 +6,20 @@ $secondaryColor: #474747;
 $logoFirstColor: #7abd06;
 $logoSecondColor: #7b68ee;
 $contentColor: #474747;
+$headerColor: #3B10A1;
 
 @import "node_modules/materialize-css/sass/materialize.scss";
 @import "node_modules/@fortawesome/fontawesome-pro/scss/fontawesome.scss";
 
 @font-face {
   font-family: "Century Gothic";
-  src: url(centurygothic_2.woff);
+  src: url(century-gothic-regular.woff);
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url(century-gothic-bold.ttf);
+  font-weight: bold;
 }
 
 * {
@@ -39,7 +46,6 @@ body {
   }
 }
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
   line-height: 1.2;
   font-weight: 100;
   font-family: $primaryFontFamily;
@@ -58,6 +64,20 @@ a {
   text-decoration: none;
 }
 
+.fal, .fas, fa {
+  color: black;
+}
+
+ul li {
+  list-style-type: disc;
+  margin-left: 40px;
+  padding-left: 10px;
+}
+.eql-col {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .hidden {
     display: none;
 }
@@ -71,7 +91,7 @@ a {
   position: relative;
   color: $primaryColor;
   width: 100%;
-  height: 100vh;
+  padding-bottom: 40px;
   .intro-background {
     position: absolute;
     top: 0;
@@ -86,9 +106,11 @@ a {
   }
   .intro-first {
     position: relative;
+    display: flex;
     h1 {
       color: white;
-      margin: 180px 40px;
+      margin: auto;
+      padding-top: 180px;
       font-size:55px;
       line-height:75px;
     }
@@ -105,7 +127,6 @@ a {
       font-size: 26px;
       color: #474747;
       padding: 0 50px 50px;
-      max-width: 688px;
     }
     button {
       color: #474747;
@@ -115,9 +136,11 @@ a {
 
 .value-proposition {
   width: 100%;
-  height: 100vh;
   padding: 0 20px;
   text-align: center;
+  .services {
+    margin-bottom: 25px;
+  }
   .header p {
     color: $logoSecondColor;
     font-family: $primaryFontFamily;
@@ -213,7 +236,187 @@ a {
   }
 }
 
+.why-peopability {
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  .brand img {
+    width: 1.5rem;
+    vertical-align: bottom;
+  }
+  .science-part, .organisation-part, .comparision-part {
+    border: $contentColor 3px solid;
+    border-radius: 30px;
+    padding-top: 35px;
+    margin-bottom: 35px;
+    font-family: $primaryFontFamily;
+    p, h6 {
+      font-size: 0.8rem;
+    }
+    h6 {
+      font-weight: bold;
+    }
+  }
+  .header {
+    background: $logoSecondColor;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h5 {
+      margin-top: 5px;
+      color: white;
+    }
+    > .col {
+
+    }
+  }
+
+  .science-part {
+    .detail {
+      height: calc(100% - 120px);
+    }
+    .detail > .col {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .organisation-part {
+    .employees, .managers, .organisations {
+      a {
+        color: black;
+      }
+      .eql-col > .col:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .traditional, .peopability {
+    h6 {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+    li {
+      font-size: 0.8rem;
+      text-align: left;
+      margin-bottom: 7px;
+    }
+  }
+  .traditional h6 {
+    padding-top: 6px;
+  }
+}
+
+.sections {
+  margin-bottom: 10px;
+  .section:nth-child(2) {
+    border-top: $headerColor 3px solid;
+    border-bottom: $headerColor 3px solid;
+    padding-bottom: 10px;
+  }
+
+  .section .fa-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.peopability-value-proposition {
+  font-family: $primaryFontFamily;
+  font-size: 1rem;
+  margin-bottom: 0;
+  h6 {
+    font-weight: bold;
+  }
+}
+
+.peopability-value-proposition-2, .peopability-value-proposition-3 {
+  font-family: $primaryFontFamily;
+  font-size: 1rem;
+  margin-bottom: 0;
+  h2 {
+    font-size: 2rem;
+    color: $headerColor;
+    text-align: center;
+    line-height: 0.4;
+    font-weight: bold;
+  }
+  h6 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .assessment-part .fa-icon {
+    .fa-rectangle-portrait:nth-child(1) {
+      margin-left: 13px;
+    }
+    .fa-rectangle-portrait:nth-child(2) {
+      margin-top: 10px;
+      background: white;
+    }
+    .fa-search {
+      width: 30px;
+      height: 60px;
+      background: white;
+      margin: 23px 0 0 30px;
+    }
+  }
+}
+
+.peopability-value-proposition-3 {
+  .sections .section:nth-child(2) {
+      border-bottom: none;
+    }
+  }
+.organise-section {
+  border-top: $headerColor 3px solid;
+  border-bottom: $headerColor 3px solid;
+  padding-bottom: 10px;
+}
+
+.peopability-employees, .peopability-managers {
+  font-family: $primaryFontFamily;
+  font-size: 1rem;
+  margin-bottom: 0;
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+    color: $headerColor;
+    text-align: center;
+    line-height: 0.4;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: $headerColor;
+  }
+  .section {
+    height: 200px;
+    .col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .section:nth-child(2n-1) {
+    background: rgba(44, 0, 143, 0.3);
+  }
+}
+@media only screen and (min-width: 601px) {
+  .science-part, .organisation-part, .comparision-part {
+    width: 30% !important;
+  }
+}
 @media only screen and (max-width: 600px) {
+  .science-part, .organisation-part, .comparision-part {
+    width: 95% !important;
+  }
   .intro-background {
     display: none;
   }
