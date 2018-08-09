@@ -13,7 +13,7 @@ html(lang='en')
     link(rel='stylesheet', href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css",integrity="sha384-TXfwrfuHVznxCssTxWoPZjhcss/hp38gEOH8UPZG/JcXonvBQ6SlsIF49wUzsGno",crossorigin="anonymous")
   body
     .container.intro
-      .row
+      .row.eql-col
         .intro-background
         .col.s12.m6.intro-first
           h1 Develop your people<br/>using metrics<br/>not guesswork
@@ -22,14 +22,14 @@ html(lang='en')
           h2.brand Peop
             span ability
           p enables a fast and scalable way to<br/>continuously analyse & optimise the impact<br/>of your peoples' capability on your business
-          button How it works
+          button.btn.btn-small How it works
     .container.value-proposition
       .row
         .row.header
+          .proposition-background
           .col.s12
             p Most organisations don’t know whether employee training is having any impact on business performance.
             p Does yours?
-            .triangle
         .row.content
           .col.s12
             p.sub-header.brand
@@ -74,25 +74,30 @@ html(lang='en')
         .col.s12.m8
           p ...in just a couple of minutes a day...
         .col.s12.m2
-          button(onclick="location.href='/value-proposition.html'",type="button") Learn more
+          button.btn.btn-small(onclick="location.href='/value-proposition.html'",type="button") Learn more
     .container.why-peopability
       .row
         .col.s12
           h1 Why Peopability ?
-      .row.eql-col
-        .col.s12.m4.science-part
+      .row.eql-col.parts-container
+        .col.m12.l4.science-part
           .row.header
             .col.s12
               h5 Connects the science of learning with the needs of business...
           .row.detail
             .col.s12
-              p.description Scientific research proves that traditional training methods&nbsp;
-               b
-                u do not work
-              i.fas.fa-brain.fa-8x
-              div
-                button Read Article
-        .col.s12.m4.organisation-part
+              .row
+                .col.s12
+                  p.description Scientific research proves that traditional training methods&nbsp;
+                   b
+                    u do not work
+              .row
+                .col.s12
+                  i.fas.fa-brain.fa-8x
+              .row
+                .col.s12
+                  button.btn.btn-small Read Article
+        .col.m12.l4.organisation-part
           .row.header
             .col.s12
               h5 ...for all levels of your organisation...
@@ -121,7 +126,7 @@ html(lang='en')
                 .col.s8
                   h6 For Organisations
                   p Multi-dimensional insight into organisational capability, allowing leadership to make strategic decisions that impact business performance
-        .col.s12.m4.comparision-part
+        .col.s12.m12.l4.comparision-part
           .row.header
             .col.s12
               h5 ...to revolutionise the way you develop your people
