@@ -398,14 +398,15 @@ ul li {
   }
   .section {
     height: 200px;
+    border: none !important;
     .col {
       display: flex;
       justify-content: center;
       align-items: center;
     }
   }
-  .section:nth-child(2n-1) {
-    background: rgba(44, 0, 143, 0.3);
+  .section:nth-child(odd) {
+    background: rgba(44, 0, 143, 0.1);
   }
 }
 @media only screen and (min-width: 601px) {
