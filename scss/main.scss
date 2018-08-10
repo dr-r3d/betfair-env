@@ -152,6 +152,7 @@ ul li {
 .value-proposition {
   width: 100%;
   text-align: center;
+  margin-bottom: 30px;
   .services {
     margin-bottom: 25px;
   }
@@ -541,7 +542,7 @@ ul li {
   .value-proposition {
     .service {
       background: $primaryColor;
-      border: $contentColor 1px solid;
+      border: $logoSecondColor 1px solid;
       border-radius: 15px;
       margin: 25px 20% !important;
       width: 60% !important;
