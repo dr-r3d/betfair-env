@@ -7,6 +7,7 @@ $logoFirstColor: #7abd06;
 $logoSecondColor: #7b68ee;
 $contentColor: #474747;
 $headerColor: #3B10A1;
+$bodyBkgColor: #F0F0F0;
 
 @import "node_modules/materialize-css/sass/materialize.scss";
 @import "node_modules/@fortawesome/fontawesome-pro/scss/fontawesome.scss";
@@ -36,7 +37,7 @@ $headerColor: #3B10A1;
 body {
   overflow-x: hidden;
   margin: 0;
-  background: $primaryColor;
+  background: $bodyBkgColor;
   font-family: $secondaryFontFamily;
   font-size: 18px;
   line-height: 1.3;
@@ -99,6 +100,8 @@ ul li {
   color: $primaryColor;
   width: 100%;
   padding-bottom: 40px;
+  border-bottom: $logoFirstColor 4px solid;
+  margin-bottom: 0;
   .intro-background {
     position: absolute;
     top: 0;
@@ -166,7 +169,7 @@ ul li {
     right: 0;
     left: 0;
     width: 100%;
-    height: 430px;
+    height: 200%;
     background: $logoSecondColor;
     clip-path: polygon(0 0, 150% 0%, 50% 50%, 0 25%);
   }
@@ -274,10 +277,13 @@ ul li {
     width: 1.5em;
     vertical-align: bottom;
   }
-
+  .parts-container {
+    padding: 40px;
+  }
   .science-part, .organisation-part, .comparision-part {
+    background: $primaryColor;
     font-size: 16px;
-    border: $contentColor 3px solid;
+    border: $logoSecondColor 3px solid;
     border-radius: 30px;
     padding-top: 35px;
     margin-bottom: 35px;
@@ -451,17 +457,16 @@ ul li {
     background: rgba(44, 0, 143, 0.1);
   }
 }
-@media only screen and (min-width: 601px) {
-  .science-part, .organisation-part, .comparision-part {
-    width: 30% !important;
+@media only screen and (min-width: 994px) {
+  .parts-container > .col {
+    width: calc(33.33% - 20px) !important;
+  }
+  .organisation-part {
+    margin-left: 30px !important;
+    margin-right: 30px !important;
   }
 }
 
-@media only screen and (min-width: 427px) and (max-width: 600px), (min-width: 702px) and (max-width: 993px), (min-width: 1904px) {
-  .value-proposition .proposition-background {
-    height: 380px;
-  }
-}
 @media only screen and (max-width: 600px) {
   body {
     font-size: 10px;
@@ -469,10 +474,28 @@ ul li {
   .intro-background {
     clip-path: polygon(0 0, 100% 0%, 100% 60%, 0 85%) !important;
     width: 100% !important;
-    height: 55% !important;
+    height: 50% !important;
   }
   .intro-first {
-    height: 300px;
+    height: 220px;
+  }
+  .intro-second {
+    > div img {
+      margin: 0px !important;
+      width: 90% !important;
+      max-width: 165px;
+      place-self: center}
+    > div p {
+      grid-row-start: 1;
+      grid-column: 2;
+      padding: 0 !important;
+      place-self: center;
+    }
+    > div {
+      display: grid;
+      grid-template-columns: auto auto ;
+      padding: 10px;
+    }
   }
   .service .service-image {
     .fa-icon {
@@ -488,13 +511,20 @@ ul li {
     }
   }
 
+  .why-peopability .parts-container {
+    padding: 0;
+  }
   .value-proposition {
     .service {
+      background: $primaryColor;
       border: $contentColor 1px solid;
       border-radius: 15px;
       margin: 25px 20% !important;
       width: 60% !important;
       padding: 18px;
+    }
+    .service .service-content {
+      font-size: 1.2em;
     }
     .sub-header .small-screen {
       display: inline;
@@ -505,7 +535,7 @@ ul li {
   }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 993px) {
+@media only screen and (min-width: 601px) and (max-width: 1110px) {
   body {
     font-size: 12px;
   }
@@ -524,7 +554,6 @@ ul li {
     align-items: center;
   }
   .science-part, .organisation-part, .comparision-part {
-    width: 95% !important;
-    margin-left: 0px !important;
+    width: 100% !important;
   }
 }
