@@ -343,12 +343,36 @@ ul li {
       font-size: 0.8em;
       font-weight: normal;
     }
-    li {
+  }
+  .detail {
+    margin-bottom: 0;
+  }
+  .detail-info {
+    margin-bottom: 40px;
+  }
+  .detail-info .col {
+    display: grid;
+    justify-content: space-around;
+    grid-auto-flow: column dense;
+    p {
+      position: relative;
       font-size: 0.7em;
       text-align: left;
-      margin-bottom: 7px;
+      padding-bottom: 7px;
+      i {margin-right: 5px}
+    }
+    .cons {
+      grid-column: 1;
+    }
+
+    .pros {
+      grid-column: 2;
+      i {
+        color: $logoFirstColor;
+      }
     }
   }
+
   .traditional h6 {
     padding-top: 6px;
   }
